@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "AliToDaraz - Price Comparison",
+  "version": "1.0.0",
+  "description": "Compare Alibaba product prices with Daraz Bangladesh instantly. Find better deals using visual search powered by Google Lens.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "*://*.alibaba.com/*",
+    "*://*.daraz.com.bd/*",
+    "*://lens.google.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.alibaba.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    },
+    "default_title": "AliToDaraz - Compare Prices"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/sidebar/index.html",
+        "assets/*"
+      ],
+      "matches": [
+        "*://*.alibaba.com/*"
+      ]
+    }
+  ]
+}
