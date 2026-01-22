@@ -1,7 +1,7 @@
 {
-  "name": "ali-to-daraz-extension",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@Ashiq3/ali-to-daraz-extension",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,13 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:e2e": "playwright test"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashiq3/alitodaraz.git"
   },
   "dependencies": {
     "react": "^18.3.1",
