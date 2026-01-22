@@ -1,2 +1,38 @@
-/.agent
-/daraz_debug.html
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build Output
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent files
+.gemini
+.agent
+
+# Release Artifacts
+*.zip
+ali-to-daraz-package.zip
+ali-to-daraz-release.zip
+ali-to-daraz-package-v3.zip
