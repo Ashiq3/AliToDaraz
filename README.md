@@ -1,20 +1,21 @@
-# AliToDaraz - Alibaba to Daraz Price Comparison 🛍️
+# AliToDaraz | Alibaba to Daraz Price Comparison Tool & Chrome Extension 🛍️
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
-**AliToDaraz** is a powerful Chrome Extension that helps dropshippers and shoppers instantly compare product prices between **Alibaba.com** and **Daraz Bangladesh**.
+**AliToDaraz** is an essential tool for **dropshippers**, **importers**, and **smart shoppers** in Bangladesh. It serves as a bridge between **Alibaba.com** and **Daraz.com.bd**, allowing you to instantly find local availability of products you see on Alibaba.
 
-It uses advanced **Visual Search technology** (powered by Google Lens) to find the exact same product on Daraz, even if the titles are completely different!
-
-![Screenshot](https://via.placeholder.com/800x400?text=AliToDaraz+App+Screenshot)
-*(Replace with actual screenshot)*
+## 🌟 Why use this tool?
+If you are looking for **"Ali to Daraz"**, **"Alibaba to Daraz converter"**, or **"Search Alibaba products on Daraz"**, this extension is for you. It solves the problem of manually searching by using:
+*   **Visual Search / Image Search**: Finds products even with different names.
+*   **Price Comparison**: Checks if buying locally on Daraz is cheaper than importing.
+*   **Sourcing Helper**: great for validating product demand in the BD market.
 
 ## ✨ Features
 
 - 🔍 **Visual Search**: Automatically finds products by image matching (no more keyword guessing!)
 - 🕵️ **Hidden Processing**: Visual search runs invisibly in the background - no annoying tabs opening.
 - ⚡ **Instant Comparison**: View Daraz prices directly on the Alibaba product page.
-- 🇧🇩 **Localized**: optimized specifically for Daraz BD.
+- 🇧🇩 **Localized**: Optimized specifically for **Daraz Bangladesh**.
 - 🔒 **Privacy Focused**: No personal data collection, runs 100% locally.
 
 ## 🚀 Installation

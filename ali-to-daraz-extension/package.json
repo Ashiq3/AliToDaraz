@@ -3,6 +3,19 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
+  "description": "A Chrome extension to compare prices between Alibaba and Daraz Bangladesh using visual search.",
+  "keywords": [
+    "alibaba",
+    "daraz",
+    "daraz-bd",
+    "price-comparison",
+    "dropshipping",
+    "chrome-extension",
+    "visual-search",
+    "sourcing",
+    "e-commerce",
+    "bangladesh"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
