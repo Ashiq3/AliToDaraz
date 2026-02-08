@@ -106,9 +106,9 @@ async function performVisualSearch(imageUrl) {
                 chrome.windows.remove(windowId).catch(() => { });
             };
 
-            const checkAndScrape = () => {
+            const checkAndExtract = () => {
                 attempts++;
-                console.log("[BG] Scrape attempt", attempts);
+                console.log("[BG] Data extraction attempt", attempts);
 
                 if (attempts > maxAttempts) {
                     console.log("[BG] Max attempts reached, closing window");
@@ -126,19 +126,19 @@ async function performVisualSearch(imageUrl) {
                         window.scrollTo(0, 0);
                     }
                 }).then(() => {
-                    // Then scrape
+                    // Then extract data
                     chrome.scripting.executeScript({
                         target: { tabId: tabId },
-                        func: scrapeLensResultsV2
+                        func: extractLensResultsV2
                     }, (injectionResults) => {
                         if (chrome.runtime.lastError) {
                             console.log("[BG] Script injection error:", chrome.runtime.lastError.message);
-                            setTimeout(checkAndScrape, 2000);
+                            setTimeout(checkAndExtract, 2000);
                             return;
                         }
 
                         const result = injectionResults?.[0]?.result;
-                        console.log("[BG] Scrape result:", JSON.stringify(result));
+                        console.log("[BG] Extraction result:", JSON.stringify(result));
 
                         if (result?.darazResults?.length > 0) {
                             console.log("[BG] Found Daraz results:", result.darazResults.length);
@@ -151,26 +151,27 @@ async function performVisualSearch(imageUrl) {
                             resolve([]);
                         } else {
                             // Keep trying
-                            setTimeout(checkAndScrape, 2000);
+                            setTimeout(checkAndExtract, 2000);
                         }
                     });
                 }).catch(err => {
                     console.log("[BG] Scroll error:", err);
-                    setTimeout(checkAndScrape, 2000);
+                    setTimeout(checkAndExtract, 2000);
                 });
             };
 
-            // Start scraping after initial load delay (give Lens time to process image)
-            setTimeout(checkAndScrape, 5000);
+            // Start data extraction after initial load delay (give Lens time to process image)
+            setTimeout(checkAndExtract, 5000);
         });
     });
 }
 
 /**
- * Scraper function v2 - runs inside Google Lens page
+ * Data extraction function v2 - runs inside Google Lens page
  * More robust DOM traversal
+ * This function collects publicly available product information from search results
  */
-function scrapeLensResultsV2() {
+function extractLensResultsV2() {
     const results = {
         pageReady: false,
         allLinks: 0,

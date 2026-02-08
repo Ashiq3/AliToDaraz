@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "AliToDaraz - Price Comparison",
   "version": "1.0.0",
-  "description": "Compare Alibaba product prices with Daraz Bangladesh instantly. Find better deals using visual search powered by Google Lens.",
+  "description": "Compare publicly available product prices between Alibaba and Daraz Bangladesh. Helps users find better deals using visual search.",
   "permissions": [
     "activeTab",
     "scripting",
